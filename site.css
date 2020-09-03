@@ -3,11 +3,11 @@
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     width: 600px;
     height: 600px;
-    border: 6px solid #2C3E50;
+    border: 6px solid #2c3e50;
     border-radius: 10px;
-    margin: 0 auto;
-    background-color: #34495E;
-    color: #FFF;
+    margin: 20px auto;
+    background-color: #34495e;
+    color: #fff;
 }
 
 .square {
@@ -18,4 +18,15 @@
     font-family: Helvetica;
     font-weight: bold;
     font-size: 4em;
+}
+
+.actions {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.spacer {
+    display: inline-block;
 }
