@@ -30,3 +30,7 @@
 .spacer {
     display: inline-block;
 }
+
+#winner-text {
+    text-align: center;
+}

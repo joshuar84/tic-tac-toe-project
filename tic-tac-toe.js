@@ -55,15 +55,34 @@ const handleClick = (e) => {
 };
 
 const determineWin = (e) => {
+    let squares = document.querySelectorAll('.square');
+    let header = document.getElementById('winner-text');
     getWinningCombinations(player1squares).forEach((combination) => {
         console.log(combination);
         if (combination) {
-            console.log("Player1 won");
+            header.innerText = `Player 1 won!`;
+            squares.forEach((sqr) => {
+                if (Array.from(sqr.childNodes).includes(document.getElementById('x'))) {
+                    sqr.removeChild(document.getElementById('x'));
+                } else if (Array.from(sqr.childNodes).includes(document.getElementById('o'))) {
+                    sqr.removeChild(document.getElementById('o'));
+                }
+
+            })
+
         }
     });
     getWinningCombinations(player2squares).forEach((combination) => {
         if (combination) {
-            console.log("Player2 won");
+            header.innerText = `Player 2 won!`
+            squares.forEach((sqr) => {
+                if (Array.from(sqr.childNodes).includes(document.getElementById('x'))) {
+                    sqr.removeChild(document.getElementById('x'));
+                } else if (Array.from(sqr.childNodes).includes(document.getElementById('o'))) {
+                    sqr.removeChild(document.getElementById('o'));
+                }
+
+            })
         }
     });
 };
