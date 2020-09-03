@@ -55,8 +55,6 @@ const handleClick = (e) => {
 };
 
 const determineWin = (e) => {
-    console.log(player1squares);
-    console.log(player2squares);
     getWinningCombinations(player1squares).forEach((combination) => {
         console.log(combination);
         if (combination) {
